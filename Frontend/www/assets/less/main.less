@@ -1,11 +1,11 @@
-@mainColor:#ea862e;
-@buttonColorMain: #f0ad4e;
-@whiteLetterColor: #fff;
-@greyLetterColor: #a1a1a1;
+@orangeColor:#ea862e;
+@whiteColor: #fff;
+@greyColor: #a1a1a1;
+@orangeBorderColor:#d16200;
+@maxMdWidth:1199px;
 
-//@import "pizza/pizza-card";
 html{
-    font-family:sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 body{
     margin:0;
@@ -17,7 +17,7 @@ body{
   margin-bottom: 20px;
   padding-left: 130px;
   padding-right: 300px;
-    @media (max-width:1199px){
+    @media (max-width:@maxMdWidth){
         padding-right:330px
     }
   padding-bottom: 10px;
@@ -25,15 +25,14 @@ body{
   background-color: rgba(0, 0, 0, .8);
   border-bottom:none;
      .label-header {
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        background-color: @mainColor;
+        background-color: @orangeColor;
         width: 100px;
         height: 90px;
-        border-left: 1px solid #d16200;
-        border-right: 1px solid #d16200;
+        border-left: 1px solid @orangeBorderColor;
+        border-right: 1px solid @orangeBorderColor;
         padding: 10px;
         left: 9px;
-        color: @whiteLetterColor;
+        color: @whiteColor;
         position: fixed;
         display: inline-block;
         text-align: center;
@@ -59,7 +58,7 @@ body{
          margin-top: 15px;
          margin-bottom: 10px;
          border-bottom: 1px solid;
-        color: @greyLetterColor;
+        color: @greyColor;
         .phone{
             font-size:20px;
         }
@@ -74,7 +73,7 @@ body{
         }
     }
     .header-second{
-        color: @whiteLetterColor;
+        color: @whiteColor;
         text-decoration: none;
         font-size: 16px;
     }
@@ -84,12 +83,12 @@ body{
     z-index: 99;
     bottom: 0;
     left: 9px;
-    background-color: @mainColor;    
+    background-color: @orangeColor;    
     width: 100px;
-    color: @whiteLetterColor;
+    color: @whiteColor;
     padding: 10px;
-    border-left: 1px solid #d16200;
-    border-right: 1px solid #d16200;
+    border-left: 1px solid @orangeBorderColor;
+    border-right: 1px solid @orangeBorderColor;
     font-weight: 700;
     font-size: 15px;
     text-align: center;
@@ -104,7 +103,7 @@ body{
     }
     
     .text-label {
-        border-bottom: 2px dotted #d16200;
+        border-bottom: 2px dotted @orangeBorderColor;
         border-bottom-width: 2px;
         border-bottom-style: dotted;
         border-bottom-color: rgb(209, 99, 1);
@@ -114,13 +113,13 @@ body{
 
 }
 .main{
-     background-color: #fffff5;
+     background-color: @whiteColor;
 .left{
  margin: auto;
  padding-left: 30px;
  padding-right: 360px;
  width: 1354px;
-    @media(min-width:992px) and (max-width:1199px){
+    @media(min-width:992px) and (max-width:@maxMdWidth){
         width:1100px;
     }
      @media(min-width:768px) and (max-width:992px){
@@ -136,33 +135,33 @@ body{
             font-size:25px;
             font-weight:600;
             .badge{
-                background-color:@mainColor;
+                background-color:@orangeColor;
             }
         }
     }
     .select-pizza{
         margin-top:-20px;
         margin-bottom:30px;
-        color:@mainColor;
+        color:@orangeColor;
         font-weight:600;
         font-size:14px;
         text-align:center;
         ul{
             display:inline-block;
             a{
-                color:@mainColor;
+                color:@orangeColor;
             }
             a:hover{
-                background-color:lighten(@mainColor,40%);
+                background-color:lighten(@orangeColor,40%);
             }
             .active a{
-                color: @whiteLetterColor;
-                background-color:@mainColor;
+                color: @whiteColor;
+                background-color:@orangeColor;
             }
         }    
     }
     .template-pizza{
-        @media (max-width: 1199px) { 
+        @media (max-width: @maxMdWidth) { 
             padding-left:0;
             padding-right:0;
         }
@@ -183,16 +182,16 @@ body{
   }
 
   h3{
-       @media (max-width:1199px){
+       @media (max-width:@maxMdWidth){
            font-size:25px;
       }
     font-size:27px;
-    color: @mainColor;
+    color: @orangeColor;
     text-align:left;
     font-weight:600;
   }
     .type{
-          color: @greyLetterColor;
+          color: @greyColor;
           text-align:left;
     }
     .inform{
@@ -240,7 +239,7 @@ body{
     
 }
 .right {
-  background-color: @whiteLetterColor;
+  background-color: @whiteColor;
         height: 100%;
         position: fixed!important;
         top: 0;
@@ -251,18 +250,18 @@ body{
         padding-right: 0!important;
         padding-left: 0!important;
         width: 270px;
-    @media(max-width:1199px){
+    @media(max-width:@maxMdWidth){
         width:300px;
     }
         height: 100%;
         z-index: 50;
-        background: #fff;
+        background: @whiteColor;
         box-shadow: rgba(0,0,0,.2) -3px 3px 10px;
 
   .order{
    padding-bottom: 13px;
     padding-left: 20px;
-      @media (max-width:1199px){
+      @media (max-width:@maxMdWidth){
           padding-left:25px;
       }
     .title {
@@ -271,12 +270,12 @@ body{
      font-weight: 700;
         .badge{
             margin-left:5px;
-            background-color:@mainColor;
+            background-color:@orangeColor;
         }
     }
 
     .delete-order{
-       color: @greyLetterColor;
+       color: @greyColor;
        float: right;
        margin-top: 3px;
        padding-right: 15px;
@@ -294,7 +293,7 @@ body{
     margin-top: 15px;
 
     .bucket-item {
-        @media (max-width:1199px){
+        @media (max-width:@maxMdWidth){
           height:125px;
       }
        height:90px;
@@ -303,18 +302,18 @@ body{
        padding: 0px 61px 10px 20px;
 
       h4{
-           @media (max-width:1199px){
+           @media (max-width:@maxMdWidth){
                font-size:18px;
           }
         font-size:15px;
           font-weight:600;
-        color: @mainColor;
+        color: @orangeColor;
         left: 10px;
       }
         
       .half-pizza {
         position: absolute;
-          @media (max-width:1199px){
+          @media (max-width:@maxMdWidth){
               width:96px;
               height:96px;
               top:14px;
@@ -335,7 +334,7 @@ body{
         display: inline-block;
       }
        .price {
-            @media (max-width:1199px){
+            @media (max-width:@maxMdWidth){
                 padding-top:10px;
            }
            font-weight:600;
@@ -370,14 +369,14 @@ body{
                     left:1px;
                 }
                 &.glyphicon-remove{
-                    color:@mainColor;
+                    color:@orangeColor;
                     top:-4px;
                     left:0;
                 }
             }
           &.remove {
             margin-left: 20px;
-            background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dfdddd));
+            background-image: -webkit-gradient(linear, left top, left bottom, from(@whiteColor), to(#dfdddd));
           }
             &.minus{
                 background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(darken(#d9534f,10%)));
@@ -391,7 +390,7 @@ body{
   }
 
     .summary{
-     background-image: -webkit-linear-gradient(top, #fff 60%,#eaeaea);
+     background-image: -webkit-linear-gradient(top, @whiteColor 60%,#eaeaea);
     padding-bottom: 4px;
     display: block!important;
     width: 100%;
@@ -399,7 +398,7 @@ body{
     padding: 10px!important;
     border-top: 1px solid rgba(0,0,0,.1);
     .amount {
-        @media (max-width:1199px){
+        @media (max-width:@maxMdWidth){
             font-size:16px;
         }
       color: black;
@@ -407,7 +406,7 @@ body{
       font-weight: 600;
     }
       .amount-number{
-          @media (max-width:1199px){
+          @media (max-width:@maxMdWidth){
             font-size:16px;
         }
           margin-left: 25%;
@@ -429,8 +428,8 @@ body{
 }
 }
 .footer {
-        background-image: -webkit-linear-gradient(top, #fff 60%,#eaeaea);
-  background-color: @whiteLetterColor;
+        background-image: -webkit-linear-gradient(top, @whiteColor 60%,#eaeaea);
+  background-color: @whiteColor;
     padding: 40px 0;
     color: grey;
     border-top: 1px solid #e5e5e5;
@@ -443,5 +442,5 @@ body{
 }
 
 .btn-primary:hover {
-    background-color: @mainColor;
+    background-color: @orangeColor;
 }
