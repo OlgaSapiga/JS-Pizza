@@ -113,17 +113,20 @@ body{
 
 }
 .main{
-     background-color: @whiteColor;
+     background-color: #fffff5;;
 .left{
  margin: auto;
  padding-left: 30px;
  padding-right: 360px;
  width: 1354px;
+     @media(min-width:@maxMdWidth) and (max-width:1300px){
+        width:1300px;
+    }
     @media(min-width:992px) and (max-width:@maxMdWidth){
-        width:1100px;
+        width:1200px;
     }
      @media(min-width:768px) and (max-width:992px){
-        width:1000px;
+        width:950px;
     }
      @media (max-width:767px){
         width:750px;
@@ -161,9 +164,9 @@ body{
         }    
     }
     .template-pizza{
-        @media (max-width: @maxMdWidth) { 
+        @media (max-width:1300px) { 
             padding-left:0;
-            padding-right:0;
+           padding-right:0;
         }
         padding-left:100px;
         padding-right:60px;
@@ -250,7 +253,7 @@ body{
         padding-right: 0!important;
         padding-left: 0!important;
         width: 270px;
-    @media(max-width:@maxMdWidth){
+    @media(max-width:1300px){
         width:300px;
     }
         height: 100%;
@@ -261,7 +264,7 @@ body{
   .order{
    padding-bottom: 13px;
     padding-left: 20px;
-      @media (max-width:@maxMdWidth){
+      @media (max-width:1300px){
           padding-left:25px;
       }
     .title {
@@ -293,7 +296,7 @@ body{
     margin-top: 15px;
 
     .bucket-item {
-        @media (max-width:@maxMdWidth){
+        @media (max-width:1300px){
           height:125px;
       }
        height:90px;
@@ -302,7 +305,7 @@ body{
        padding: 0px 61px 10px 20px;
 
       h4{
-           @media (max-width:@maxMdWidth){
+           @media (max-width:1300px){
                font-size:18px;
           }
         font-size:15px;
@@ -313,7 +316,7 @@ body{
         
       .half-pizza {
         position: absolute;
-          @media (max-width:@maxMdWidth){
+          @media (max-width:1300px){
               width:96px;
               height:96px;
               top:14px;
@@ -334,7 +337,7 @@ body{
         display: inline-block;
       }
        .price {
-            @media (max-width:@maxMdWidth){
+            @media (max-width:1300px){
                 padding-top:10px;
            }
            font-weight:600;
@@ -390,7 +393,6 @@ body{
   }
 
     .summary{
-     background-image: -webkit-linear-gradient(top, @whiteColor 60%,#eaeaea);
     padding-bottom: 4px;
     display: block!important;
     width: 100%;
@@ -428,7 +430,6 @@ body{
 }
 }
 .footer {
-        background-image: -webkit-linear-gradient(top, @whiteColor 60%,#eaeaea);
   background-color: @whiteColor;
     padding: 40px 0;
     color: grey;
