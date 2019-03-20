@@ -1,9 +1,26 @@
-<div>
-    <%= pizza.title %> (<%= size %>)
-    <div>Ціна: <%= pizza[size].price %> грн.</div>
+<div class="bucket-item">
+    <% if(pizza[size].size == pizza.big_size.size) { %>
+        <h4><%= pizza.title %> (Велика)</h4>
+    <% } else if(pizza[size].size == pizza.small_size.size){%>
+        <h4><%= pizza.title %> (Мала)</h4>
+    <% } %>
+    <div class="size"><img src="assets/images/size-icon.svg"/> <%= pizza[size].size %> </div>
+    <div class="weight"><img src="assets/images/weight.svg"/> <%= pizza[size].weight %> </div>
     <div>
-        <button class="btn btn-danger minus">-</button>
-        <span class="label label-default"><%= quantity %></span>
-        <button class="btn btn-success plus">+</button>
+        <h4 class="price"><%= pizza[size].price %> грн</h4>
+        <div class="count">
+            <button class="btn btn-danger minus">
+                <i class="glyphicon glyphicon-minus"></i>
+            </button>
+            <span class="quantity"><%= quantity %></span>
+
+            <button class="btn btn-success plus">
+                <i class="glyphicon glyphicon-plus"></i>
+            </button>
+            <button class="btn btn-default remove">
+                <i class="glyphicon glyphicon-remove"></i>
+            </button>
+        </div>
     </div>
+    <img class="half-pizza" src="<%= pizza.icon %>"/>
 </div>

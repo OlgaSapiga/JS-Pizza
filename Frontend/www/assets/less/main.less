@@ -43,7 +43,7 @@ body{
     }
          .image{
           transform: rotate(180deg);
-            margin: 0!iportant;
+            margin: 0!important;
             padding: 0!important;
             position: absolute;
             bottom: -11px;
@@ -94,7 +94,7 @@ body{
     text-align: center;
     
     .img{
-        margin: 0!iportant;
+        margin: 0!important;
         padding: 0!important;
         position: absolute;
         top: -11px;
@@ -173,10 +173,10 @@ body{
 }
     .pizza-card {
    position:relative;
-   padding-top:30px;
+   padding-top:10px;
         p.pizza-label {
           position: absolute;
-          top: -15px;
+          top: -20px;
           right: -15px;
           font-size: 23px;
         }
@@ -216,6 +216,9 @@ body{
     }
     .right-col{
         display: inline-block;
+      &.only{
+        width:100%;
+      }
         .weight,.size{
             text-align:center;
         }
@@ -302,14 +305,14 @@ body{
        height:90px;
        border: 1px solid #ddd;
        position: relative;
-       padding: 0px 61px 10px 20px;
+       padding: 0px 61px 10px 10px;
 
       h4{
            @media (max-width:1300px){
                font-size:18px;
           }
         font-size:15px;
-          font-weight:600;
+        font-weight:600;
         color: @orangeColor;
         left: 10px;
       }
@@ -333,7 +336,7 @@ body{
             margin-top:-10px;
         }
       .weight{
-       margin-left: 50px;
+        margin-left: 50px;
         display: inline-block;
       }
        .price {
@@ -343,12 +346,13 @@ body{
            font-weight:600;
            display: inline-block;
            color: #000;
+           font-size:15px;
         }
       .count {
            margin: 4px;
            display: inline-block;
            font-weight: 700;
-        .amount {
+        .quantity {
           margin-left: 5px;
           margin-right: 5px;
           font-weight: bold;
