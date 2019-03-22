@@ -1,7 +1,7 @@
 <div class="bucket-item">
-    <% if(pizza[size].size == pizza.big_size.size) { %>
+    <% if(pizza.big_size && size === 'big_size') { %>
         <h4><%= pizza.title %> (Велика)</h4>
-    <% } else if(pizza[size].size == pizza.small_size.size){%>
+    <% } else if(pizza.small_size && size === 'small_size'){%>
         <h4><%= pizza.title %> (Мала)</h4>
     <% } %>
     <div class="size"><img src="assets/images/size-icon.svg"/> <%= pizza[size].size %> </div>
