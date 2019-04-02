@@ -432,6 +432,13 @@ body{
           &.disabled{
             background-color:lighten(@orangeColor,30%);
           }
+          &.btn-back-order{
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0dede));
+            line-height:1;
+            width:90%;
+            height:40px;
+
+          }
         }
     }
   }
@@ -452,4 +459,46 @@ body{
 
 .btn-primary:hover {
     background-color: @orangeColor;
+}
+.contact-data{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.bs-callout {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-left: 5px solid @orangeColor;
+  background-color: #fff;
+}
+
+.next-step-wrap {
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.contact-data{
+  margin-top:70px;
+}
+.next-step-button{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(darken(#f0ad4e,10%)));
+  a:hover{
+    text-decoration:none;
+  }
+}
+.google-map{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#googleMap{
+  height: 300px;
+}
+.error {
+  border: 1px solid red;
+  color: red;
+}
+.ok{
+  border: 1px solid green;
+  color: green;
 }

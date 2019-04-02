@@ -68,7 +68,6 @@ function initialiseCart() {
     }
     var savedOrder= Storage.get('ordered');
     $(".ordered").text(savedOrder);
-    ordered=parseInt($(".ordered").text());
     //Фукнція віпрацьвуватиме при завантаженні сторінки
     //Тут можна наприклад, зчитати вміст корзини який збережено в Local Storage то показати його
 
@@ -80,10 +79,11 @@ function getPizzaInCart() {
     return Cart;
 }
 $('.delete-order').click(function() {
-    Cart.forEach(removeFromCart);
+    Cart = [];
     $(".ordered").text(Cart.length);
     total = 0;
     $(".amount-number").text(total+" грн");
+    updateCart();
 });
 
 
@@ -96,6 +96,7 @@ function updateCart() {
         $(".btn-lg").attr("class", "btn btn-warning btn-lg disabled");
     else
         $(".btn-lg").attr("class", "btn btn-warning btn-lg");
+
     //Онволення однієї піци
     function showOnePizzaInCart(item) {
         var html = Templates.PizzaCart_OneItem(item);
@@ -103,6 +104,21 @@ function updateCart() {
         var $node = $(html);
         var pricePizza = parseInt($node.find(".price").text());
         var countPizza = parseInt($node.find(".quantity").text());
+        if($("button").hasClass("btn-back-order")){
+            $node.find(".plus").hide();
+            $node.find(".minus").hide();
+            $node.find(".remove").hide();
+            if(countPizza===1) {
+                $node.find(".quantity").text(countPizza + " піца");
+            }
+            else if(countPizza>=2&&countPizza<=4) {
+                $node.find(".quantity").text(countPizza + " піци");
+            }
+            else{
+                $node.find(".quantity").text(countPizza + " піц");
+            }
+
+        }
         $node.find(".plus").click(function () {
             //Збільшуємо кількість замовлених піц
             item.quantity++;
@@ -148,6 +164,22 @@ function updateCart() {
     Storage.set("ordered",Cart.length);
 }
 
+// function createOrder(callback) {
+//     API.createOrder({
+//             name: "Client name",
+//             phone: "123456789",
+//             order: Cart
+//         },
+//         function (err, result) {
+//             if (err) {
+//                 return callback(err);
+//             }
+//             callback(null, result);
+//         }
+//     )
+// }
+
+
 exports.removeFromCart = removeFromCart;
 exports.addToCart = addToCart;
 
@@ -155,3 +187,5 @@ exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
 
 exports.PizzaSize = PizzaSize;
+
+// exports.createOrder = createOrder;

@@ -291,7 +291,9 @@
                  <span class="amount"> Сума замовлення</span> 
                 <span class="amount-number">0 грн</span>
                 <div class="button-order">
-                    <button class="btn btn-warning btn-lg">Замовити</button>
+                    <a href="http://localhost:5050/order.html" class="back-order-button">
+                    <button class="btn btn-warning btn-lg btn-do-order">Замовити</button>
+                    </a>
                 </div>
              </div>
         </div>
@@ -304,8 +306,11 @@
 
 <!--Bootsrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
 <!--Own JavaScript -->
 <script type="text/javascript"  src="assets/js/main.js"> </script>
+ <script	type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBu8EfHXfhweZE-W19Uo2d_UIFrmKvOeMo">
+ </script>
+ <script	src="//static.liqpay.com/libjs/checkout.js" async></script>
 </body>
 </html>
